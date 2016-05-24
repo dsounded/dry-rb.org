@@ -8,8 +8,8 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 
 <ul>
 <li>The input is a hash with stringified keys</li>
-<li>The input include values that are strings, hashes or arrays</li>
-<li>Prior validation, we need to coerce values and symbolize keys based on the information from rules</li>
+<li>The input can include values that are strings, hashes or arrays</li>
+<li>Prior to validation, we need to coerce values and symbolize keys based on the information in the rules</li>
 </ul>
 
 <p>For that reason, <code>dry-validation</code> ships with <code>Form</code> validation:</p>
@@ -29,7 +29,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 </code></pre>
 
 <blockquote>
-<p>Form-specific value coercion is handled by a hash-schema using <code>dry-types</code>. It is built automatically for you based on the type expectations and used prior applying validation rules.</p>
+<p>Form-specific value coercion is handled by a hash-schema using <code>dry-types</code>. It is built automatically for you based on the type expectations and used prior to applying the validation rules.</p>
 </blockquote>
 
 <h2 id="handling-empty-strings">Handling Empty Strings</h2>

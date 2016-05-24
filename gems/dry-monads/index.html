@@ -171,7 +171,7 @@ can be thought of as &ldquo;everything went right&rdquo; and the <code>Left</cod
 <pre class="syntax ruby"><code><span class="no">M</span> <span class="o">=</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Monads</span>
 
 <span class="no">M</span><span class="o">.</span><span class="no">Right</span><span class="p">(</span><span class="mi">10</span><span class="p">).</span><span class="nf">value</span> <span class="c1"># =&gt; 10</span>
-<span class="no">M</span><span class="o">.</span><span class="no">Error</span><span class="p">(</span><span class="s1">'Error'</span><span class="p">).</span><span class="nf">value</span> <span class="c1"># =&gt; 'Error'</span>
+<span class="no">M</span><span class="o">.</span><span class="no">Left</span><span class="p">(</span><span class="s1">'Error'</span><span class="p">).</span><span class="nf">value</span> <span class="c1"># =&gt; 'Error'</span>
 
 </code></pre>
 
@@ -225,7 +225,7 @@ can be thought of as &ldquo;everything went right&rdquo; and the <code>Left</cod
   <span class="c1"># By default Try catches all exceptions inherited from StandardError.</span>
   <span class="c1"># However you can catch only certain exceptions like this</span>
   <span class="no">Try</span><span class="p">(</span><span class="no">NoMethodError</span><span class="p">,</span> <span class="no">NotImplementedError</span><span class="p">)</span> <span class="p">{</span> <span class="mi">10</span> <span class="o">/</span> <span class="mi">0</span> <span class="p">}</span>
-  <span class="c1"># =&gt; raise ZeroDivisionError: divided by 0 exception</span>
+  <span class="c1"># =&gt; raised ZeroDivisionError: divided by 0 exception</span>
 <span class="k">end</span>
 </code></pre>
 

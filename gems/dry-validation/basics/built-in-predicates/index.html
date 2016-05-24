@@ -129,7 +129,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
     <span class="n">assert</span> <span class="o">!</span><span class="p">{</span><span class="ss">sample: </span><span class="p">{}}[</span><span class="ss">:sample</span><span class="p">].</span><span class="nf">empty?</span>
   <span class="k">end</span>
 
-  <span class="n">it</span> <span class="s1">'with dry-validatoin'</span> <span class="k">do</span>
+  <span class="n">it</span> <span class="s1">'with dry-validation'</span> <span class="k">do</span>
     <span class="n">assert</span> <span class="n">schema</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="ss">sample: </span><span class="s2">""</span><span class="p">).</span><span class="nf">success?</span>
     <span class="n">assert</span> <span class="n">schema</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="ss">sample: </span><span class="p">[]).</span><span class="nf">success?</span>
     <span class="n">assert</span> <span class="n">schema</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="ss">sample: </span><span class="p">{}).</span><span class="nf">success?</span>
@@ -153,7 +153,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
     <span class="n">assert</span> <span class="o">!</span><span class="p">{</span><span class="ss">sample: </span><span class="p">{</span><span class="ss">k: </span><span class="mi">3</span><span class="p">}}[</span><span class="ss">:sample</span><span class="p">].</span><span class="nf">empty?</span>
   <span class="k">end</span>
 
-  <span class="n">it</span> <span class="s1">'with dry-validatoin'</span> <span class="k">do</span>
+  <span class="n">it</span> <span class="s1">'with dry-validation'</span> <span class="k">do</span>
     <span class="n">assert</span> <span class="n">schema</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="ss">sample: </span><span class="s2">"1"</span><span class="p">).</span><span class="nf">success?</span>
     <span class="n">assert</span> <span class="n">schema</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="ss">sample: </span><span class="p">[</span><span class="mi">2</span><span class="p">]).</span><span class="nf">success?</span>
     <span class="n">assert</span> <span class="n">schema</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="ss">sample: </span><span class="p">{</span><span class="ss">k: </span><span class="mi">3</span><span class="p">}).</span><span class="nf">success?</span>
@@ -224,7 +224,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 <h3 id="lteq"><code>lteq?</code></h3>
 
 <p>Checks that the value is less than or equal to the given value.</p>
-<pre class="syntax ruby"><code><span class="n">describe</span> <span class="s1">'lt?'</span> <span class="k">do</span>
+<pre class="syntax ruby"><code><span class="n">describe</span> <span class="s1">'lteq?'</span> <span class="k">do</span>
   <span class="n">let</span><span class="p">(</span><span class="ss">:schema</span><span class="p">)</span> <span class="k">do</span>
     <span class="no">Dry</span><span class="o">::</span><span class="no">Validation</span><span class="o">.</span><span class="no">Schema</span> <span class="k">do</span>
       <span class="n">key</span><span class="p">(</span><span class="ss">:sample</span><span class="p">)</span> <span class="p">{</span> <span class="n">lteq?</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">}</span>
@@ -243,7 +243,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 
 <h3 id="max_size"><code>max_size?</code></h3>
 
-<p>Check that an array&rsquo;s size is no less than or equal to the given value.</p>
+<p>Check that an array&rsquo;s size is less than or equal to the given value.</p>
 <pre class="syntax ruby"><code><span class="n">describe</span> <span class="s1">'max_size?'</span> <span class="k">do</span>
   <span class="n">let</span><span class="p">(</span><span class="ss">:schema</span><span class="p">)</span> <span class="k">do</span>
     <span class="no">Dry</span><span class="o">::</span><span class="no">Validation</span><span class="o">.</span><span class="no">Schema</span> <span class="k">do</span>
@@ -292,7 +292,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
   <span class="k">end</span>
 
   <span class="n">it</span> <span class="s1">'with regular ruby'</span> <span class="k">do</span>
-    <span class="n">assert</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span><span class="nf">size</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">assert</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">].</span><span class="nf">size</span> <span class="o">==</span> <span class="mi">3</span>
   <span class="k">end</span>
 
   <span class="n">it</span> <span class="s1">'with dry-validation'</span> <span class="k">do</span>
@@ -303,7 +303,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 
 <h3 id="size-range"><code>size?(range)</code></h3>
 
-<p>Checks that an array&rsquo;s size is between a range of values.</p>
+<p>Checks that an array&rsquo;s size is within a range of values.</p>
 <pre class="syntax ruby"><code><span class="n">describe</span> <span class="s1">'size?'</span> <span class="k">do</span>
   <span class="n">let</span><span class="p">(</span><span class="ss">:schema</span><span class="p">)</span> <span class="k">do</span>
     <span class="no">Dry</span><span class="o">::</span><span class="no">Validation</span><span class="o">.</span><span class="no">Schema</span> <span class="k">do</span>
