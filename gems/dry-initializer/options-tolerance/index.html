@@ -8,7 +8,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 <pre class="syntax ruby"><code><span class="nb">require</span> <span class="s1">'dry-initializer'</span>
 
 <span class="k">class</span> <span class="nc">User</span>
-  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span>
+  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span><span class="o">::</span><span class="no">Mixin</span>
 <span class="k">end</span>
 
 <span class="n">user</span> <span class="o">=</span> <span class="no">User</span><span class="p">.</span><span class="nf">new</span> <span class="ss">email: </span><span class="s1">'joe@example.com'</span> <span class="c1"># raises ArgumentError</span>
@@ -18,7 +18,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 <pre class="syntax ruby"><code><span class="nb">require</span> <span class="s1">'dry-initializer'</span>
 
 <span class="k">class</span> <span class="nc">User</span>
-  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span>
+  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span><span class="o">::</span><span class="no">Mixin</span>
 
   <span class="n">tolerant_to_unknown_options</span>
 <span class="k">end</span>

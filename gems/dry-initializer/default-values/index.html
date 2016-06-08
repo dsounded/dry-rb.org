@@ -8,7 +8,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 <pre class="syntax ruby"><code><span class="nb">require</span> <span class="s1">'dry-initializer'</span>
 
 <span class="k">class</span> <span class="nc">User</span>
-  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span>
+  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span><span class="o">::</span><span class="no">Mixin</span>
 
   <span class="n">param</span>  <span class="ss">:name</span><span class="p">,</span>  <span class="ss">default: </span><span class="nb">proc</span> <span class="p">{</span> <span class="s1">'Unknown user'</span> <span class="p">}</span>
   <span class="n">option</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">default: </span><span class="nb">proc</span> <span class="p">{</span> <span class="s1">'unknown@example.com'</span> <span class="p">}</span>
@@ -27,7 +27,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 <pre class="syntax ruby"><code><span class="nb">require</span> <span class="s1">'dry-initializer'</span>
 
 <span class="k">class</span> <span class="nc">User</span>
-  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span>
+  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span><span class="o">::</span><span class="no">Mixin</span>
 
   <span class="n">param</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">default: </span><span class="nb">proc</span> <span class="p">{</span> <span class="s1">'Unknown name'</span> <span class="p">}</span>
   <span class="n">param</span> <span class="ss">:email</span> <span class="c1"># =&gt; #&lt;SyntaxError ...&gt;</span>
@@ -38,7 +38,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 <pre class="syntax ruby"><code><span class="nb">require</span> <span class="s1">'dry-initializer'</span>
 
 <span class="k">class</span> <span class="nc">User</span>
-  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span>
+  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span><span class="o">::</span><span class="no">Mixin</span>
 
   <span class="n">param</span>  <span class="ss">:name</span>
   <span class="n">option</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">default: </span><span class="nb">proc</span> <span class="p">{</span> <span class="kp">nil</span> <span class="p">}</span>
@@ -57,7 +57,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 <pre class="syntax ruby"><code><span class="nb">require</span> <span class="s1">'dry-initializer'</span>
 
 <span class="k">class</span> <span class="nc">User</span>
-  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span>
+  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span><span class="o">::</span><span class="no">Mixin</span>
 
   <span class="n">param</span> <span class="ss">:name_proc</span><span class="p">,</span> <span class="ss">default: </span><span class="nb">proc</span> <span class="p">{</span> <span class="nb">proc</span> <span class="p">{</span> <span class="s1">'Unknown user'</span> <span class="p">}</span> <span class="p">}</span>
 <span class="k">end</span>
@@ -70,7 +70,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 <pre class="syntax ruby"><code><span class="nb">require</span> <span class="s1">'dry-initializer'</span>
 
 <span class="k">class</span> <span class="nc">User</span>
-  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span>
+  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span><span class="o">::</span><span class="no">Mixin</span>
 
   <span class="n">param</span> <span class="ss">:name</span>
   <span class="n">param</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">default: </span><span class="nb">proc</span> <span class="p">{</span> <span class="s2">"</span><span class="si">#{</span><span class="nb">name</span><span class="p">.</span><span class="nf">downcase</span><span class="si">}</span><span class="s2">@example.com"</span> <span class="p">}</span>
@@ -84,7 +84,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 <pre class="syntax ruby"><code><span class="nb">require</span> <span class="s1">'dry-initializer'</span>
 
 <span class="k">class</span> <span class="nc">User</span>
-  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span>
+  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span><span class="o">::</span><span class="no">Mixin</span>
 
   <span class="n">param</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">default: </span><span class="o">-&gt;</span> <span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span> <span class="s1">'Dude'</span> <span class="p">}</span>
 <span class="k">end</span>

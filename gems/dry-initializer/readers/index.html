@@ -10,7 +10,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 <pre class="syntax ruby"><code><span class="nb">require</span> <span class="s1">'dry-initializer'</span>
 
 <span class="k">class</span> <span class="nc">User</span>
-  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span>
+  <span class="kp">extend</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Initializer</span><span class="o">::</span><span class="no">Mixin</span>
 
   <span class="n">param</span> <span class="ss">:name</span>
   <span class="n">param</span> <span class="ss">:email</span><span class="p">,</span> <span class="ss">reader: </span><span class="kp">false</span>
