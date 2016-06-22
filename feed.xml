@@ -4,7 +4,7 @@
   <id>http://dry-rb.org/news</id>
   <link href="http://dry-rb.org/news"/>
   <link href="http://dry-rb.org/feed.xml" rel="self"/>
-  <updated>2016-04-07T10:00:00+10:00</updated>
+  <updated>2016-04-07T08:00:00+08:00</updated>
   <author>
     <name>dry-rb community</name>
   </author>
@@ -12,8 +12,8 @@
     <title>dry-transaction 0.6 brings powerful new support for custom step adapters</title>
     <link rel="alternate" href="http://dry-rb.org/news/2016/04/07/dry-transaction-0-6-brings-powerful-new-support-for-custom-step-adapters/"/>
     <id>http://dry-rb.org/news/2016/04/07/dry-transaction-0-6-brings-powerful-new-support-for-custom-step-adapters/</id>
-    <published>2016-04-07T10:00:00+10:00</published>
-    <updated>2016-04-07T10:07:17+10:00</updated>
+    <published>2016-04-07T08:00:00+08:00</published>
+    <updated>2016-04-07T08:07:17+08:00</updated>
     <author>
       <name>timriley</name>
     </author>
@@ -76,8 +76,8 @@
     <title>New releases of dry-types and dry-validation</title>
     <link rel="alternate" href="http://dry-rb.org/news/2016/03/31/new-releases-of-dry-types-and-dry-validation/"/>
     <id>http://dry-rb.org/news/2016/03/31/new-releases-of-dry-types-and-dry-validation/</id>
-    <published>2016-03-31T11:00:00+11:00</published>
-    <updated>2016-04-07T10:06:58+10:00</updated>
+    <published>2016-03-31T08:00:00+08:00</published>
+    <updated>2016-04-07T08:06:58+08:00</updated>
     <author>
       <name>solnic</name>
     </author>
@@ -263,8 +263,8 @@
     <title>Announcing dry-rb</title>
     <link rel="alternate" href="http://dry-rb.org/news/2016/03/16/announcing-dry-rb/"/>
     <id>http://dry-rb.org/news/2016/03/16/announcing-dry-rb/</id>
-    <published>2016-03-16T11:00:00+11:00</published>
-    <updated>2016-03-17T08:33:23+11:00</updated>
+    <published>2016-03-16T08:00:00+08:00</published>
+    <updated>2016-03-17T05:33:23+08:00</updated>
     <author>
       <name>solnic</name>
     </author>
