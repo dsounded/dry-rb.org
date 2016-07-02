@@ -37,16 +37,16 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 
 <h3 id="synopsis">Synopsis</h3>
 <pre class="syntax ruby"><code><span class="no">UserSchema</span> <span class="o">=</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Validation</span><span class="o">.</span><span class="no">Schema</span> <span class="k">do</span>
-  <span class="n">key</span><span class="p">(</span><span class="ss">:name</span><span class="p">).</span><span class="nf">required</span>
+  <span class="n">required</span><span class="p">(</span><span class="ss">:name</span><span class="p">).</span><span class="nf">filled</span>
 
-  <span class="n">key</span><span class="p">(</span><span class="ss">:email</span><span class="p">).</span><span class="nf">required</span><span class="p">(</span><span class="nb">format</span><span class="sc">?:</span> <span class="no">EMAIL_REGEX</span><span class="p">)</span>
+  <span class="n">required</span><span class="p">(</span><span class="ss">:email</span><span class="p">).</span><span class="nf">filled</span><span class="p">(</span><span class="nb">format</span><span class="sc">?:</span> <span class="no">EMAIL_REGEX</span><span class="p">)</span>
 
-  <span class="n">key</span><span class="p">(</span><span class="ss">:age</span><span class="p">).</span><span class="nf">maybe</span><span class="p">(</span><span class="ss">:int?</span><span class="p">)</span>
+  <span class="n">required</span><span class="p">(</span><span class="ss">:age</span><span class="p">).</span><span class="nf">maybe</span><span class="p">(</span><span class="ss">:int?</span><span class="p">)</span>
 
-  <span class="n">key</span><span class="p">(</span><span class="ss">:address</span><span class="p">).</span><span class="nf">schema</span> <span class="k">do</span>
-    <span class="n">key</span><span class="p">(</span><span class="ss">:street</span><span class="p">).</span><span class="nf">required</span>
-    <span class="n">key</span><span class="p">(</span><span class="ss">:city</span><span class="p">).</span><span class="nf">required</span>
-    <span class="n">key</span><span class="p">(</span><span class="ss">:zipcode</span><span class="p">).</span><span class="nf">required</span>
+  <span class="n">required</span><span class="p">(</span><span class="ss">:address</span><span class="p">).</span><span class="nf">schema</span> <span class="k">do</span>
+    <span class="n">required</span><span class="p">(</span><span class="ss">:street</span><span class="p">).</span><span class="nf">filled</span>
+    <span class="n">required</span><span class="p">(</span><span class="ss">:city</span><span class="p">).</span><span class="nf">filled</span>
+    <span class="n">required</span><span class="p">(</span><span class="ss">:zipcode</span><span class="p">).</span><span class="nf">filled</span>
   <span class="k">end</span>
 <span class="k">end</span>
 

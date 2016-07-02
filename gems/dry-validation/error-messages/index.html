@@ -81,7 +81,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 <span class="n">schema</span> <span class="o">=</span> <span class="no">Dry</span><span class="o">::</span><span class="no">Validation</span><span class="o">.</span><span class="no">Schema</span> <span class="k">do</span>
   <span class="n">configure</span> <span class="p">{</span> <span class="n">config</span><span class="p">.</span><span class="nf">messages</span> <span class="o">=</span> <span class="ss">:i18n</span> <span class="p">}</span>
 
-  <span class="n">key</span><span class="p">(</span><span class="ss">:email</span><span class="p">).</span><span class="nf">required</span>
+  <span class="n">required</span><span class="p">(</span><span class="ss">:email</span><span class="p">).</span><span class="nf">filled</span>
 <span class="k">end</span>
 
 <span class="c1"># return default translations</span>

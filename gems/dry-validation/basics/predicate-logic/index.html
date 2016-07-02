@@ -10,7 +10,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 
 <h3 id="conjunction-and">Conjunction (and)</h3>
 <pre class="syntax ruby"><code><span class="no">Dry</span><span class="o">::</span><span class="no">Validation</span><span class="o">.</span><span class="no">Schema</span> <span class="k">do</span>
-  <span class="n">key</span><span class="p">(</span><span class="ss">:age</span><span class="p">)</span> <span class="p">{</span> <span class="n">int?</span> <span class="o">&amp;</span> <span class="n">gt?</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span> <span class="p">}</span>
+  <span class="n">required</span><span class="p">(</span><span class="ss">:age</span><span class="p">)</span> <span class="p">{</span> <span class="n">int?</span> <span class="o">&amp;</span> <span class="n">gt?</span><span class="p">(</span><span class="mi">18</span><span class="p">)</span> <span class="p">}</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -18,7 +18,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 
 <h3 id="disjunction-or">Disjunction (or)</h3>
 <pre class="syntax ruby"><code><span class="no">Dry</span><span class="o">::</span><span class="no">Validation</span><span class="o">.</span><span class="no">Schema</span> <span class="k">do</span>
-  <span class="n">key</span><span class="p">(</span><span class="ss">:age</span><span class="p">)</span> <span class="p">{</span> <span class="n">none?</span> <span class="o">|</span> <span class="n">int?</span> <span class="p">}</span>
+  <span class="n">required</span><span class="p">(</span><span class="ss">:age</span><span class="p">)</span> <span class="p">{</span> <span class="n">none?</span> <span class="o">|</span> <span class="n">int?</span> <span class="p">}</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -26,7 +26,7 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 
 <h3 id="implication-then">Implication (then)</h3>
 <pre class="syntax ruby"><code><span class="no">Dry</span><span class="o">::</span><span class="no">Validation</span><span class="o">.</span><span class="no">Schema</span> <span class="k">do</span>
-  <span class="n">key</span><span class="p">(</span><span class="ss">:age</span><span class="p">)</span> <span class="p">{</span> <span class="n">filled?</span> <span class="o">&gt;</span> <span class="n">int?</span> <span class="p">}</span>
+  <span class="n">required</span><span class="p">(</span><span class="ss">:age</span><span class="p">)</span> <span class="p">{</span> <span class="n">filled?</span> <span class="o">&gt;</span> <span class="n">int?</span> <span class="p">}</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -38,8 +38,8 @@ ga('send', 'pageview');</script></head><body><header><div class="content-wrap"><
 
 <h3 id="exclusive-disjunction-xor">Exclusive Disjunction (xor)</h3>
 <pre class="syntax ruby"><code><span class="no">Dry</span><span class="o">::</span><span class="no">Validation</span><span class="o">.</span><span class="no">Schema</span> <span class="k">do</span>
-  <span class="n">key</span><span class="p">(</span><span class="ss">:eat_cookie</span><span class="p">).</span><span class="nf">required</span>
-  <span class="n">key</span><span class="p">(</span><span class="ss">:have_cookie</span><span class="p">).</span><span class="nf">required</span>
+  <span class="n">required</span><span class="p">(</span><span class="ss">:eat_cookie</span><span class="p">).</span><span class="nf">filled</span>
+  <span class="n">required</span><span class="p">(</span><span class="ss">:have_cookie</span><span class="p">).</span><span class="nf">filled</span>
 
   <span class="n">rule</span><span class="p">(</span><span class="ss">be_reasonable: </span><span class="p">[</span><span class="ss">:eat_cookie</span><span class="p">,</span> <span class="ss">:have_cookie</span><span class="p">])</span> <span class="k">do</span> <span class="o">|</span><span class="n">eat_cookie</span><span class="p">,</span> <span class="n">have_cookie</span><span class="o">|</span>
     <span class="n">eat_cookie</span><span class="p">.</span><span class="nf">eql?</span><span class="p">(</span><span class="s1">'yes'</span><span class="p">)</span> <span class="o">^</span> <span class="n">have_cookie</span><span class="p">.</span><span class="nf">eql?</span><span class="p">(</span><span class="s1">'yes'</span><span class="p">)</span>
